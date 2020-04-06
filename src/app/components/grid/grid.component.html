@@ -1,0 +1,20 @@
+<input
+  type="number"
+  name="linesize"
+  id="linesize"
+  (input)="setLineSize($event.target.value)"
+/>
+<input
+  type="number"
+  name="colsize"
+  id="colsize"
+  (input)="setColSize($event.target.value)"
+/>
+
+<div class="line" *ngFor="let line of cellList; index as i">
+  <div class="column" *ngFor="let column of cellList[i]">
+    <app-cell></app-cell>
+  </div>
+</div>
+
+<app-shortcut-bar></app-shortcut-bar>

@@ -1,0 +1,10 @@
+<div
+  class="cell"
+  [ngStyle]="{ background: painted ? 'black' : 'white' }"
+  (click)="cellClick()"
+  (dragenter)="cellClick()"
+>
+<a>
+  <img class="icon" src="{{ this.icon }}">
+</a>
+</div>
